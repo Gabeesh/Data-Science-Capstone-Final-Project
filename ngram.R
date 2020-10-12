@@ -11,13 +11,13 @@
 #   library(stringr)
 # })
 
-setwd ("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3")
+setwd ("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH")
 getwd()
 
-#' Load Training Data, created by `04A_Task_Script.R`
-bi_words <- readRDS("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/bi_words_fast.rds")
-tri_words  <- readRDS("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/tri_words_fast.rds")
-quad_words <- readRDS("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/quad_words_fast.rds")
+#' Load Training Data, created by `Task_Script.R`
+bi_words <- readRDS("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/bi_words_fast.rds")
+tri_words  <- readRDS("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/tri_words_fast.rds")
+quad_words <- readRDS("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/quad_words_fast.rds")
 
 #' Create Ngram Matching Functions
 bigram <- function(input_words){

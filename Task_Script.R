@@ -1,5 +1,5 @@
 #' ---
-#' title: 'Task 04A: Fast Ngram Files'
+#' title: 'Task: Fast Ngram Files'
 #' author: "Gabeesh Mishra"
 #' date: "`r format(Sys.Date())`"
 #' output: 
@@ -16,14 +16,14 @@ suppressPackageStartupMessages({
 })
 
 #' ## Load the Data
-setwd ("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3")
+setwd ("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH")
 getwd()
 #+ DataLoading
 
 #' English Repository Files
-blogs_file   <- "C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/en_US.blogs.txt"
-news_file    <- "C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/en_US.news.txt"
-twitter_file <- "C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/en_US.twitter.txt"  
+blogs_file   <- "C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/en_US.blogs.txt"
+news_file    <- "C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/en_US.news.txt"
+twitter_file <- "C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/en_US.twitter.txt"  
 
 #' Read the data files
 blogs   <- readLines(blogs_file, skipNul = TRUE)
@@ -151,7 +151,7 @@ ggplot(data = disty, aes(y = number, x = reorder(ngram, -number))) +
   geom_boxplot() + scale_y_log10() +
   xlab("ngram")
 ##ggsave("./ngram_match/www/ngrams.png")
-ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/www2/ngrams.png")
+ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/ngrams.png")
 
 sextgram_cover %>%
   top_n(15, n) %>%
@@ -161,7 +161,7 @@ sextgram_cover %>%
   xlab(NULL) +
   coord_flip() +
   ggtitle("Sextgrams")
-ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/www2/sextgrams.png")
+ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/sextgrams.png")
 
 quintgram_cover %>%
   top_n(15, n) %>%
@@ -171,7 +171,7 @@ quintgram_cover %>%
   xlab(NULL) +
   coord_flip() +
   ggtitle("Quintgrams")
-ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/www2/quintgrams.png")
+ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/quintgrams.png")
 
 quadgram_cover %>%
   top_n(15, n) %>%
@@ -181,7 +181,7 @@ quadgram_cover %>%
   xlab(NULL) +
   coord_flip() +
   ggtitle("Quadgrams")
-ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/www2/quadgrams.png")
+ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/quadgrams.png")
 
 trigram_cover %>%
   top_n(15, n) %>%
@@ -191,7 +191,7 @@ trigram_cover %>%
   xlab(NULL) +
   coord_flip() +
   ggtitle("Trigrams")
-ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/www2/trigrams.png")
+ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/trigrams.png")
 
 bigram_cover %>%
   top_n(15, n) %>%
@@ -201,7 +201,7 @@ bigram_cover %>%
   xlab(NULL) +
   coord_flip() +
   ggtitle("Bigrams")
-ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/www2/bigrams.png")
+ggsave("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/bigrams.png")
 
 #' ## Separate words
 #+ NgramWords 
@@ -227,11 +227,11 @@ sext_words
 
 
 #' Save data for the Shiny App
-saveRDS(bi_words, "C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/bi_words_fast.rds")
-saveRDS(tri_words, "C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/tri_words_fast.rds")
-saveRDS(quad_words,"C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/quad_words_fast.rds")
-saveRDS(quint_words,"C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/quint_words_fast.rds")
-saveRDS(sext_words,"C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match/app_data2/sext_words_fast.rds")
+saveRDS(bi_words, "C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/bi_words_fast.rds")
+saveRDS(tri_words, "C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/tri_words_fast.rds")
+saveRDS(quad_words,"C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/quad_words_fast.rds")
+saveRDS(quint_words,"C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/quint_words_fast.rds")
+saveRDS(sext_words,"C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH/sext_words_fast.rds")
 #' 
 #' -------------
 #'  

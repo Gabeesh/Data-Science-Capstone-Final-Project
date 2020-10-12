@@ -1,5 +1,5 @@
 #' ---
-#' title: 'Task 06: Data Product'
+#' title: 'Data Product'
 #' author: "Gabeesh Mishra"
 #' date: "`r format(Sys.Date())`"
 #' output: github_document
@@ -15,7 +15,7 @@ suppressPackageStartupMessages({
    library(stringr)
  })
 
-setwd("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match")
+setwd("C:/Data Science - John Hopkins/FINAL CAPSTONE/GABEESH")
 getwd()
 
 #' Source ngram matching function
