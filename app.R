@@ -15,6 +15,9 @@ suppressPackageStartupMessages({
    library(stringr)
  })
 
+setwd("C:/Data Science - John Hopkins/FINAL CAPSTONE/$GABEESH3/ngram_match")
+getwd()
+
 #' Source ngram matching function
 source("ngram.R")
 
